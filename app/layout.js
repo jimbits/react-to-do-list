@@ -1,5 +1,5 @@
 import {Advent_Pro} from 'next/font/google'
-
+import {NavBar} from '@/components/navbar/NavBar'
 import '@/css/globals.css'
 
 // Different Styles of Fonts
@@ -9,14 +9,17 @@ const headingFont = Advent_Pro({
 })
 
 export const metadata = {
-	title: 'Starter Kit',
-	description: 'starter kit for next.js applications',
+	title: 'To Do List App',
+	description: 'Best to do list of the year in DMIT',
 }
 
 export default function RootLayout({children}) {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body>
+				<NavBar className="bg-blue-100" />
+				{children}
+			</body>
 		</html>
 	)
 }
