@@ -1,12 +1,5 @@
-import {Advent_Pro} from 'next/font/google'
 import {NavBar} from '@/components/navbar/NavBar'
 import '@/css/globals.css'
-
-// Different Styles of Fonts
-const headingFont = Advent_Pro({
-	subsets: ['latin'],
-	display: 'swap',
-})
 
 export const metadata = {
 	title: 'To Do List App',
