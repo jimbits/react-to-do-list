@@ -2,30 +2,34 @@ import {ProviderButton, ProviderLabel} from '@/components/forms/ProviderButton'
 import {Heading, Title} from '@/components/headings'
 import {Container} from '@/components/layout/Container'
 import {IoLogoGithub, IoLogoGoogle} from 'react-icons/io'
-import {FormControl, Label, Input} from '@/components/forms'
+import {FormControl, Label, Input, TermsOfUse} from '@/components/forms'
 import {Button} from '@/components/buttons/Button'
+import {Anchor, AnchorLabel} from '@/components/anchor/Anchor'
+import {SignInOption} from '@/components/forms/SignInOptions'
+import {BrandLogo} from '@/components/brand'
 function SignUpPage({children}) {
 	return (
 		<>
-			<main className="mt-24 py-36 bg-zinc-100">
-				<section className="max-w-lg py-24 mx-auto bg-white  rounded-md border border-zinc-300 px-8">
-					<Heading className="mb-12">
-						<Title as="h2" className="text-2xl font-semibold text-zinc-700">
-							Create an Account
+			<main className="mt-24   ">
+				<section className="max-w-lg py-10 mx-auto bg-white  rounded-md border border-zinc-300 px-8">
+					<Heading className="mb-12 text-center">
+						<BrandLogo className="w-10 h-10 inline fill-indigo-900" />
+						<Title as="h2" className="text-2xl font-bold text-zinc-900">
+							Account Sign Up
 						</Title>
 					</Heading>
-					<Container className="flex gap-x-4">
-						<ProviderButton className="rounded-lg flex justify-center items-center border border-zinc-300 w-full py-2.5 gap-x-2.5">
-							<IoLogoGoogle className="w-6 h-6" /> <ProviderLabel>Google</ProviderLabel>
+					<Container className=" flex flex-col items-center gap-y-4">
+						<ProviderButton className="rounded-lg flex w-3/4 px-16  items-center border border-zinc-300 py-2.5 gap-x-2.5 hover:bg-zinc-100">
+							<IoLogoGoogle className="w-6 h-6" /> <ProviderLabel>Sign up with Google</ProviderLabel>
 						</ProviderButton>
-						<ProviderButton className="rounded-lg flex justify-center items-center border border-zinc-300 w-full py-2.5 gap-x-2.5">
-							<IoLogoGithub className="w-6 h-6" /> <ProviderLabel>GitHub</ProviderLabel>
+						<ProviderButton className="rounded-lg flex w-3/4 px-16  items-center border border-zinc-300   py-2.5 gap-x-2.5 hover:bg-zinc-100">
+							<IoLogoGithub className="w-6 h-6" /> <ProviderLabel>Sign up with GitHub</ProviderLabel>
 						</ProviderButton>
 					</Container>
-					<Container className="flex items-center my-12">
-						<div className="w-full h-0.5 bg-gray-200 dark:bg-gray-700"></div>
-						<div className="px-7 text-center text-gray-500 dark:text-gray-400">or</div>
-						<div className="w-full h-0.5 bg-gray-200 dark:bg-gray-700"></div>
+					<Container className="flex items-center justify-between mt-16 mb-10 gap-x-2">
+						<div className="flex-1  h-0.5 bg-gray-200 dark:bg-gray-700"></div>
+						<div className="flex-2 text-sm text-center text-gray-500  ">Sign up with email and password</div>
+						<div className="flex-1 h-0.5 bg-gray-200  "></div>
 					</Container>
 
 					<form className="space-y-8">
@@ -39,9 +43,11 @@ function SignUpPage({children}) {
 							<Input type="text" id="password" name="password" placeholder="ex: N45sd6md@pr" />
 						</FormControl>
 						<FormControl className="mt-12">
-							<Button className="w-full">Create Your Account</Button>
+							<Button className="w-full bg-indigo-950">Create Free Account</Button>
 						</FormControl>
 					</form>
+					<SignInOption className="my-10" />
+					<TermsOfUse className="" />
 				</section>
 			</main>
 		</>

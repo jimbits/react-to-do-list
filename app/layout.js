@@ -9,8 +9,9 @@ export const metadata = {
 export default function RootLayout({children}) {
 	return (
 		<html lang="en">
-			<body>
-				<NavBar className="bg-blue-100" />
+			<link rel="icon" href="/svg/favicon.svg" type="image/svg+xml" />
+			<body className="bg-gray-200">
+				<NavBar />
 				{children}
 			</body>
 		</html>

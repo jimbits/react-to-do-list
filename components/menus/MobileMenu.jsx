@@ -10,7 +10,7 @@ function MobileMenu({children, className}) {
 		<nav className={cn('text-inherit', className)}>
 			<Sheet>
 				<SheetTrigger>
-					<SlMenu />
+					<SlMenu className="fill-white" />
 				</SheetTrigger>
 				<SheetContent className="pt-28 flex flex-col items-center">
 					<SheetHeader className="">
