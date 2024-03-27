@@ -12,4 +12,4 @@ function SignInOption({children, className}) {
 	)
 }
 
-export {SignInOption}
+export default SignInOption

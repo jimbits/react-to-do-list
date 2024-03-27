@@ -2,12 +2,15 @@ import {ProviderButton, ProviderLabel} from '@/components/forms/ProviderButton'
 import {Heading, Title} from '@/components/headings'
 import {Container} from '@/components/layout/Container'
 import {IoLogoGithub, IoLogoGoogle} from 'react-icons/io'
-import {FormControl, Label, Input, TermsOfUse} from '@/components/forms'
+import {EmailAndPasswordForm, TermsOfUse, SignInOption} from '@/components/forms'
 import {Button} from '@/components/buttons/Button'
 import {Anchor, AnchorLabel} from '@/components/anchor/Anchor'
-import {SignInOption} from '@/components/forms/SignInOptions'
+
 import {BrandLogo} from '@/components/brand'
+
 function SignUpPage({children}) {
+	console.log('this is a server component')
+
 	return (
 		<>
 			<main className="mt-24   ">
@@ -32,7 +35,7 @@ function SignUpPage({children}) {
 						<div className="flex-1 h-0.5 bg-gray-200  "></div>
 					</Container>
 
-					<form className="space-y-8">
+					{/* <form className="space-y-8">
 						<FormControl className="flex flex-col">
 							<Label forHtml="email">Enter Email Address</Label>
 							<Input type="text" id="email" name="email" placeholder="jane_doe@gmail.com" />
@@ -45,8 +48,9 @@ function SignUpPage({children}) {
 						<FormControl className="mt-12">
 							<Button className="w-full bg-indigo-950">Create Free Account</Button>
 						</FormControl>
-					</form>
-					<SignInOption className="my-10" />
+					</form> */}
+					<EmailAndPasswordForm />
+					<SignInOption className="my-9" />
 					<TermsOfUse className="" />
 				</section>
 			</main>
