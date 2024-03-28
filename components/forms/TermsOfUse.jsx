@@ -4,7 +4,7 @@ function TermsOfUse({children, className}) {
 	return (
 		<footer className={cn('', className)}>
 			<h3 className="text-[11px] text-gray-500 font-medium">Terms of use.</h3>
-			<p for="terms" className="font-light text-gray-500 dark:text-gray-300 text-[10px]">
+			<p className="font-light text-gray-500 dark:text-gray-300 text-[10px]">
 				The creaters reserves the right, at its sole discretion, to change, modify, add or remove portions of the
 				<Link href="#" className=" text-blue-500 font-medium text-primary-600 dark:text-primary-500 hover:underline px-1">
 					Privacy Policy
