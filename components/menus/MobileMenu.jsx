@@ -14,11 +14,7 @@ function MobileMenu({children, className}) {
 				</SheetTrigger>
 				<SheetContent className="pt-28 flex flex-col items-center">
 					<SheetHeader className="">
-						<SheetTitle>
-							<Title as="h2" className="text-zinc-600 text-2xl">
-								Welcome{' '}
-							</Title>
-						</SheetTitle>
+						<Title className="text-zinc-600 text-2xl">Welcome </Title>
 						<SheetDescription className="w-2/3 mx-auto">Thanks for taking the time to check out our to do list. In order to try the demo you will need to sign up for an account.</SheetDescription>
 					</SheetHeader>
 					<Container className="flex flex-col   gap-y-6 mt-10">
