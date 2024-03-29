@@ -1,4 +1,4 @@
-function SignInPage({children}) {
+async function SignInPage({children}) {
 	return (
 		<>
 			<header className="text-center pt-28">

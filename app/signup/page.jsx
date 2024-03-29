@@ -8,7 +8,7 @@ import {Anchor, AnchorLabel} from '@/components/anchor/Anchor'
 
 import {BrandLogo} from '@/components/brand'
 
-function SignUpPage({children}) {
+async function SignUpPage({children}) {
 	console.log('this is a server component')
 
 	return (
