@@ -8,15 +8,60 @@ import {auth} from '@/lib/firebase/firebaseInit'
 async function signUpAction(formdata) {
 	const email = formdata.get('email')
 	const password = formdata.get('password')
-	redirect('/demo')
+	// firebase sdk issue...
+	try {
+		const userObj = await createNewUser(email, password)
+		redirect('/demo')
+	} catch (error) {
+		console.log(error)
+	}
 
 	return null
 }
 
 export {signUpAction}
 
+async function createNewUser(email, password) {
+	return await createUserWithEmailAndPassword(auth, email, password)
+}
+
+// suspense error boundaries  storybook
+
+//   function networkDelay(){
+//    return new Promise(resolve=>{
+// 		setTimeout(()=>{
+// 		  let ans = [{
+// 			uid: "6b27d025",
+// 			product: "Product D",
+// 			quantit: 5,
+// 			price: 100,
+// 			total: 500,
+// 			salesPerson: "Mirha"
+// 		}]
+// 		 resolve(ans)
+// 		}, 2000)
+// 	 })
+//   }
+
+//   Next.js server component access to the NODE.js environemnt
+//   Backend programming NEXT.js directly in next.js Window Object Not a browser OS
+
+//   const thing = new Promise ((resolve, reject)=>{
+// 	// slow processs
+// 	  true ? resolve(12)  : reject("oops")
+//   })
+
+//   thing.then(x).catch(y)
+
+// try {
+// 	  await thing()
+// } catch (error) {
+// 	  reject()
+// }
+
 /* 
              REDIRECT NOT WORKING
+			  PROMISE LIKE   
 createUserWithEmailAndPassword(auth, email, password)
 		.then((userCredential) => {
 			// user credentials that it  created uid..., username, photo, phonenubmer, validated
@@ -24,7 +69,7 @@ createUserWithEmailAndPassword(auth, email, password)
 			console.log(user)
 			// on success rediret to the /demo
 			// next/navigation/redirect
-			redirect('/demo')
+		 
 		})
 		.catch((error) => {
 			const errorCode = error.code
