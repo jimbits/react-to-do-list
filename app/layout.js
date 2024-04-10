@@ -1,4 +1,7 @@
+import {Toaster} from '@/components/ui/sonner'
+
 import {NavBar} from '@/components/navbar/NavBar'
+
 import '@/css/globals.css'
 
 export const metadata = {
@@ -13,6 +16,13 @@ export default function RootLayout({children}) {
 			<body className="bg-gray-200">
 				<NavBar />
 				{children}
+				<Toaster
+					position="top-center"
+					visibleToasts={1}
+					toastOptions={{
+						unstyled: true,
+					}}
+				/>
 			</body>
 		</html>
 	)
